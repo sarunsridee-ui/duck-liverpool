@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html lang="th">
+<!DOCTYPE html><html lang="th">
 <head>
 <meta charset="UTF-8">
 <title>สร้างมาคนที่รักลิเวอร์พูล</title>
-
 <style>
 body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
   background-color:red;
-  background-image:url("duck.png");
-  background-repeat:repeat;
+  background-image:url('duck.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
   color:white;
 }
-
 #topBtn{
   position:fixed;
   top:10px;
@@ -22,15 +21,13 @@ body{
   padding:12px 24px;
   font-size:18px;
   cursor:pointer;
-  z-index:999;
+  z-index:10;
 }
-
 h1{
   text-align:center;
-  margin-top:90px;
+  margin-top:80px;
   font-size:48px;
 }
-
 .matches{
   display:flex;
   flex-wrap:wrap;
@@ -38,22 +35,17 @@ h1{
   gap:10px;
   margin:40px;
 }
-
 .match{
-  background:#8b0000;
+  background:rgba(139,0,0,0.85);
   padding:8px;
-  width:140px;
+  width:130px;
   text-align:center;
   border:2px solid white;
-  font-size:14px;
 }
-
 .match img{
-  width:90px;
-  display:block;
-  margin:0 auto 6px;
+  width:60px;
+  height:auto;
 }
-
 footer{
   margin:40px 10px;
   text-align:center;
@@ -61,35 +53,26 @@ footer{
 }
 </style>
 </head>
-
 <body>
-
 <button id="topBtn">กดตรงนี้</button>
-
 <h1>สร้างมาคนที่รักลิเวอร์พูล</h1>
-
 <div class="matches">
-  <div class="match"><img src="liverpool.png"><div>แพ้ฟอเรสต์1-0</div></div>
-  <div class="match"><img src="liverpool.png"><div>แพ้ลูตัน2-1</div></div>
-  <div class="match"><img src="liverpool.png"><div>แพ้เบิร์นลีย์1-0</div></div>
-  <div class="match"><img src="liverpool.png"><div>แพ้เชฟยู3-1</div></div>
-  <div class="match"><img src="liverpool.png"><div>แพ้ลีดส์2-1</div></div>
-  <div class="match"><img src="liverpool.png"><div>แพ้บอร์นมัธ1-0</div></div>
-  <div class="match"><img src="liverpool.png"><div>แพ้ฟูแล่ม3-0</div></div>
-  <div class="match"><img src="liverpool.png"><div>แพ้เบรนท์ฟอร์ด2-0</div></div>
-  <div class="match"><img src="liverpool.png"><div>แพ้ไบรท์ตัน3-0</div></div>
-  <div class="match"><img src="liverpool.png"><div>แพ้วูล์ฟ1-0</div></div>
+  <div class="match"><img src="arsenal.png"><p>อาร์เซน่อล 3-1</p></div>
+  <div class="match"><img src="manutd.png"><p>แมนยู 2-1</p></div>
+  <div class="match"><img src="chelsea.png"><p>เชลซี 4-1</p></div>
+  <div class="match"><img src="brighton.png"><p>ไบรท์ตัน 3-0</p></div>
+  <div class="match"><img src="napoli.png"><p>นาโปลี 4-1</p></div>
+  <div class="match"><img src="real.png"><p>เรอัลมาดริด 5-2</p></div>
+  <div class="match"><img src="wolves.png"><p>วูล์ฟส์ 3-0</p></div>
+  <div class="match"><img src="brentford.png"><p>เบรนท์ฟอร์ด 3-1</p></div>
+  <div class="match"><img src="forest.png"><p>ฟอเรสต์ 1-0</p></div>
+  <div class="match"><img src="lution.png"><p>ลูตัน 2-1</p></div>
 </div>
-
-<footer>
-เว็บนี้สร้างขึ้นมาเพื่อความบันเทิงล้วนๆกูพูดเล่นเป็ดไก่จัดอร่อยได้ทีมกากๆชนะได้ก็บุญแพ้ทีมเล็กคือของคู่ลิเวอร์พูลความหวังคือภาพลวงตาแต้มคือของแจกจริง
-</footer>
-
+<footer>เว็บนี้สร้างมาแซวขำๆใครอ่านแล้วหัวร้อนแปลว่ายังอินอยู่ฟุตบอลมันก็แค่นี้แหละวันนี้ชนะพรุ่งนี้แจกแต้มชีวิตต้องไปต่ออย่าร้อง</footer>
 <script>
-document.getElementById("topBtn").onclick = function(){
-  alert("ขอบคุณที่แจกแต้มขอบคุณที่ใจบุญให้กับทีมเล็กๆเป็ดย่าง");
+document.getElementById('topBtn').onclick=function(){
+  alert('ขอบคุณที่แจกแต้มขอบคุณที่ใจบุญให้กับทีมเล็กๆเป็ดย่าง');
 };
 </script>
-
 </body>
 </html>
