@@ -1,61 +1,118 @@
-<!DOCTYPE html><html lang="th">
+<!DOCTYPE html>
+<html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>สร้างมาคนที่รักลิเวอร์พูล</title>
+<title>เว็บล้อลิเวอร์พูลไม่ได้โกรธนะบิว😊</title>
+
 <style>
 body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
-  background:red;
+  background:#8b0000;
   color:white;
-}/* เป็ดย่างเป็นลายพื้นหลัง */ body::before{ content:""; position:fixed; inset:0; background-image:url('https://upload.wikimedia.org/wikipedia/commons/6/6e/Roast_duck.jpg'); background-repeat:repeat; background-size:150px; opacity:0.25; z-index:-1; }
+}
 
-#topBtn{ position:fixed; top:10px; left:50%; transform:translateX(-50%); padding:12px 24px; font-size:18px; cursor:pointer; }
+/* พื้นหลังเป็ดย่าง รูปเดียว ใหญ่ */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:url('duck.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:85%;
+  opacity:0.25;
+  z-index:-1;
+}
 
-h1{ text-align:center; margin-top:80px; font-size:48px; }
+#topBtn{
+  position:fixed;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:12px 24px;
+  font-size:18px;
+  cursor:pointer;
+}
 
-.matches{ display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin:40px; }
+h1{
+  text-align:center;
+  margin-top:90px;
+  font-size:46px;
+}
 
-.match{ background:#8b0000; padding:8px; width:140px; text-align:center; border:2px solid white; font-size:14px; }
+.matches{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin:30px;
+}
 
-.match img{ width:80px; height:auto; }
+.match{
+  background:#5c0000;
+  padding:8px;
+  width:150px;
+  text-align:center;
+  border:2px solid white;
+  font-size:13px;
+}
 
-footer{ margin:40px 10px; text-align:center; font-size:14px; } </style>
+.match img{
+  width:70px;
+  margin-bottom:5px;
+}
 
+footer{
+  margin:40px 10px;
+  text-align:center;
+  font-size:14px;
+}
+</style>
 </head>
-<body><button id="topBtn">กดตรงนี้</button>
 
-<h1>สร้างมาคนที่รักลิเวอร์พูล</h1><div class="matches" id="matches"></div><footer>สร้างมาคนที่รักลิเวอร์พูล</footer><script>
-// ปุ่มด้านบน
-const btn = document.getElementById('topBtn');
-btn.addEventListener('click',function(){
+<body>
+
+<button id="topBtn">กดตรงนี้</button>
+
+<h1>สร้างมาคนที่รักลิเวอร์พูล</h1>
+
+<div class="matches" id="matches"></div>
+
+<footer>เว็บนี้สร้างขึ้นมาเพื่อความบันเทิงล้วนๆกูพูดเล่นเป็ดไก่จัดอร่อยได้ทีมกากๆชนะได้ก็บุญ</footer>
+
+<script>
+document.getElementById('topBtn').onclick = function(){
   alert('ขอบคุณที่แจกแต้มขอบคุณที่ใจบุญให้กับทีมเล็กๆเป็ดย่าง');
-});
+};
 
-// รายชื่อทีมที่ลิเวอร์พูลแพ้
+/* รายชื่อทีม (วนซ้ำให้เป็นร้อยนัด) */
 const teams = [
-  'ฟอเรสต์','ลูตัน','เบิร์นลีย์','เชฟยู','ลีดส์','บอร์นมัธ','วัตฟอร์ด','เบรนท์ฟอร์ด','ฟูแล่ม','ไบรท์ตัน','เอฟเวอร์ตัน','เวสต์แฮม','คริสตัลพาเลซ','นิวคาสเซิล','แอสตันวิลลา'
+  'อาร์เซนอล','แมนยู','แมนซิตี้','เชลซี','สเปอร์ส','นิวคาสเซิล',
+  'แอสตันวิลลา','ไบรท์ตัน','เวสต์แฮม','ฟูแล่ม','เบรนท์ฟอร์ด',
+  'เอฟเวอร์ตัน','ลีดส์','วูล์ฟส์','ฟอเรสต์','บอร์นมัธ',
+  'เบิร์นลีย์','เชฟยู','ลูตัน','คริสตัลพาเลซ'
 ];
 
-// สกอร์สุ่ม
-const scores = ['1-0','2-1','3-1','2-0','3-0','4-1'];
+const scores = ['1-0','2-0','2-1','3-1','3-0','4-1','5-0'];
 
-const container = document.getElementById('matches');
+const box = document.getElementById('matches');
 
-// สร้าง 120 นัดแพ้จริง
-for(let i=0;i<120;i++){
+/* สร้าง 150 นัด */
+for(let i=0;i<150;i++){
   const team = teams[Math.floor(Math.random()*teams.length)];
   const score = scores[Math.floor(Math.random()*scores.length)];
 
   const div = document.createElement('div');
   div.className = 'match';
-
   div.innerHTML = `
     <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg">
-    <p>แพ้${team} ${score}</p>
+    <div>แพ้${team}</div>
+    <div>${score}</div>
   `;
-
-  container.appendChild(div);
+  box.appendChild(div);
 }
-</script></body>
+</script>
+
+</body>
 </html>
